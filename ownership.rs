@@ -13,7 +13,6 @@ fn main() {
 
     println!("The length of '{}' is {}.", s3, len); // s3 can still be used because it was borrowed, not moved
 }
-
 fn calculate_length(s: &String) -> usize {
     s.len()
 }
