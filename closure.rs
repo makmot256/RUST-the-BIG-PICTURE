@@ -16,7 +16,6 @@ fn main(){
         // return the sum
         sum
     }
-    
     // print the sum of 1 to 10 using the sum_range closure
     println!("Sum of 1 to 10: {}", sum_range(1,11));
 }
@@ -24,6 +23,7 @@ fn main(){
 // Iterators in rust    
     // create an iterator over the numbers from 1 to 10
     let numbers = (1..11);
+    let numbers = (2..22)
 
     // iterate over the numbers and print each one
     for n in numbers{
