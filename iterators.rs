@@ -153,7 +153,26 @@ fn main() {
     println!("Is sorted by odd/even: {}", sorted);
 
 
+    // show that you can use chain to chain multiple iterators together
+    let numbers1 = (1..5);
+    let numbers2 = (6..10);
+    let chained = numbers1.chain(numbers2);
+    println!("Chained: {:?}", chained.collect::<Vec<i32>>());
 
+
+    // show that you can use flatten to flatten an iterator of iterators
+    let numbers1 = vec![1, 2, 3];
+    let numbers2 = vec![4, 5, 6];
+    let numbers3 = vec![7, 8, 9];
+    let numbers = vec![numbers1.iter(), numbers2.iter(), numbers3.iter()];
+    let flattened = numbers.flatten();
+    println!("Flattened: {:?}", flattened.collect::<Vec<&i32>>());
+
+
+    // show that you can use flat_map to flatten an iterator of iterators and apply a function to each element
+    let numbers = vec![1, 2, 3];
+    let flattened = numbers.iter().flat_map(|n| (1..*n).map(|m| m * n));
+    println!("Flattened: {:?}", flattened.collect::<Vec<i32>>());
 
 
 
