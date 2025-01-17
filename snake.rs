@@ -6,12 +6,10 @@ mod math_operations {
     pub fn add_two_numbers(num_one: i32, num_two: i32) -> i32 {
         num_one + num_two
     }
-
     pub fn subtract_two_numbers(num_one: i32, num_two: i32) -> i32 {
         num_one - num_two
     }
 }
-
 fn main() {
     // Define variables using snake case
     let first_number = 10;
