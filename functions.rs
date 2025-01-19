@@ -70,5 +70,16 @@ fn main() {
         a != b
     }
 
-    // Define a function that takes two integers and returns true
+    // Define a function that takes an operator and two integers and returns the result of the operation
+
+//calculator function
+    fn calculate(op: char, a: i32, b: i32) -> i32 {
+        match op {
+            '+' => add(a, b),
+            '-' => subtract(a, b),
+            '*' => multiply(a, b),
+            '/' => divide(a, b).expect("Cannot divide by zero"),
+            _ => panic!("Invalid operator"),
+        }
+    }
 
