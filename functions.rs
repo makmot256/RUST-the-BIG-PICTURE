@@ -40,5 +40,35 @@ fn main() {
         Some(q) => println!("Quotient: {}", q),
         None => println!("Cannot divide by zero"),
     }
-}
+    // Define a function that takes two integers and returns true if the first is greater than the second
+    fn is_greater_than(a: i32, b: i32) -> bool {
+        a > b
+    }
+
+    // Define a function that takes two integers and returns true if the first is less than the second
+    fn is_less_than(a: i32, b: i32) -> bool {
+        a < b
+    }
+
+    // Define a function that takes two integers and returns true if the first is equal to the second
+    fn is_equal_to(a: i32, b: i32) -> bool {
+        a == b
+    }
+
+    // Define a function that takes two integers and returns true if the first is greater than or equal to the second
+    fn is_greater_than_or_equal_to(a: i32, b: i32) -> bool {
+        a >= b
+    }
+
+    // Define a function that takes two integers and returns true if the first is less than or equal to the second
+    fn is_less_than_or_equal_to(a: i32, b: i32) -> bool {
+        a <= b
+    }
+
+    // Define a function that takes two integers and returns true if the first is not equal to the second
+    fn is_not_equal_to(a: i32, b: i32) -> bool {
+        a != b
+    }
+
+    // Define a function that takes two integers and returns true
 
