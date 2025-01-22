@@ -45,6 +45,33 @@ fn main() {
         a > b
     }
 
+    // Define a function that takes two integers and returns their remainder
+    fn remainder(a: i32, b: i32) -> Option<i32> {
+        if b != 0 {
+            Some(a % b)
+        } else {
+            None
+        }
+    }
+
+    // Define a function that takes two integers and returns the maximum
+    fn max(a: i32, b: i32) -> i32 {
+        if a > b {
+            a
+        } else {
+            b
+        }
+    }
+
+    // Define a function that takes two integers and returns the minimum
+    fn min(a: i32, b: i32) -> i32 {
+        if a < b {
+            a
+        } else {
+            b
+        }
+    }
+
     // Define a function that takes two integers and returns true if the first is less than the second
     fn is_less_than(a: i32, b: i32) -> bool {
         a < b
