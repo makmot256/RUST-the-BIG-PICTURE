@@ -10,6 +10,7 @@ fn subtract(a: i32, b: i32) -> i32 {
     a - b
 }
 
+
 // Define a function that takes two integers and returns their product
 fn multiply(a: i32, b: i32) -> i32 {
     a * b
