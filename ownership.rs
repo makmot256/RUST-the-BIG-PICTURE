@@ -18,4 +18,39 @@ fn calculate_length(s: &String) -> usize {
 }
 
 
+fn ownership_example() {
+    // Ownership: value is owned by variable
+    let x = String::from("ownership");
+    println!("x: {}", x); // x owns the string
+
+    // Move: ownership is transferred
+    let y = x; // x is no longer valid, y now owns the string
+    // println!("x: {}", x); // this would cause a compile error
+    println!("y: {}", y);
+
+    // Clone: deep copy is created
+    let z = y.clone(); // y and z both own separate copies of the string
+    println!("y: {}, z: {}", y, z);
+}
+
+fn borrowing_example() {
+    // Borrowing: allows temporary access without transfer of ownership
+    let a = String::from("borrowing");
+
+    let length = calculate_length(&a); // a is borrowed by calculate_length
+    println!("The length of '{}' is {}.", a, length); // a can still be used
+
+    // Mutable Borrowing: allows modification of the borrowed value
+    let mut b = String::from("mutable");
+    change(&mut b); // b is borrowed mutably by change
+    println!("b after change: {}", b);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+
+fn change(s: &mut String) {
+    s.push_str(" borrow");
+}
 
