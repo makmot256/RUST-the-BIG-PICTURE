@@ -54,3 +54,25 @@ fn change(s: &mut String) {
     s.push_str(" borrow");
 }
 
+fn me_more_ownership_example() {
+    // Slices: references to parts of a collection
+    let s = String::from("me more ownership");
+    let hello = &s[3..7]; // hello is a slice of s, references the characters "o m"
+    println!("s: {}, hello: {}", s, hello);
+
+    // Copy: types that implement Copy are copied when passed as arguments or assigned to new variables
+    let x = 5;
+    let y = x; // x is copied to y
+    println!("x: {}, y: {}", x, y);
+
+    let s = String::from("copy");
+    let s2 = s.clone(); // s is copied to s2
+    println!("s: {}, s2: {}", s, s2);
+
+    // Move: types that do not implement Copy are moved when passed as arguments or assigned to new variables
+    let s = String::from("move");
+    let s2 = s; // s is moved to s2
+    // println!("s: {}", s); // this would cause a compile error
+    println!("s2: {}", s2);
+}
+
