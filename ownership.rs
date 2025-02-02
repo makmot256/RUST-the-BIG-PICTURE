@@ -75,4 +75,27 @@ fn me_more_ownership_example() {
     // println!("s: {}", s); // this would cause a compile error
     println!("s2: {}", s2);
 }
+fn more_ownership_example() {
+    // Ownership rules:
+    // 1. Each value in Rust has an owner.
+    // 2. There can only be one owner at a time.
+    // 3. When the owner goes out of scope, the value will be dropped.
+    let s = String::from("ownership rules");
+    {
+        let s2 = s; // s is moved to s2, s is no longer valid
+        println!("s2: {}", s2);
+    }
+    // println!("s: {}", s); // this would cause a compile error
 
+    // References: allow multiple owners
+    let s = String::from("references");
+    let r1 = &s; // r1 is a reference to s
+    let r2 = &s; // r2 is a reference to s
+    println!("r1: {}, r2: {}", r1, r2);
+
+    // Mutable references
+    let mut s = String::from("mutable references");
+    let r1 = &mut s; // r1 is a mutable reference to s
+    // let r2 = &mut s; // this would cause a compile error
+    println!("r1: {}", r1);
+}
