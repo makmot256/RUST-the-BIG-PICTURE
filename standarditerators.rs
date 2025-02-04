@@ -5,6 +5,10 @@ fn main() {
         .filter(|x| x % 2 == 0)
         // fold the remaining numbers together using the provided lambda
         .fold(0, |tally, x| tally + x);
+
+    // map takes a function of type: FnMut(A) -> B, and returns an iterator of type: Iterator<Item=B>
+    // filter takes a function of type: FnMut(&A) -> bool and returns an iterator of type: Iterator<Item=A>
+    // fold takes an initial value of type: B, and a function of type: FnMut(B, A) -> B and returns an iterator of type: Iterator<Item=B>
    
     // print the sum
     println!("Sum: {}", sum);

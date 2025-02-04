@@ -10,3 +10,4 @@ fn main() {
     println!("The factorial of {} is {}", number, factorial(number));
 }
 
+
