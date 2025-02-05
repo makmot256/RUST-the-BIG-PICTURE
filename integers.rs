@@ -13,3 +13,16 @@ mod tests {
         assert_eq!(compute(1, 2), 9);
     }
 }
+fn power_of_2(n: u32) -> u32 {
+    1 << n
+}
+
+#[cfg(test)]
+mod tests2 {
+    use crate::power_of_2;
+
+    #[test]
+    fn case() {
+        assert_eq!(power_of_2(7), 128);
+    }
+}
