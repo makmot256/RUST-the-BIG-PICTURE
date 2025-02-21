@@ -45,5 +45,7 @@ fn main(){
     let sum = doubles.sum();
     println!("Sum of doubles: {}", sum);
 
-
     
+    //solana web3 js
+    //anchor framewrok.
+//foundry 
