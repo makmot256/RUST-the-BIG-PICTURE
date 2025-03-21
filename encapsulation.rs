@@ -14,7 +14,6 @@ mod bank {
         pub fn balance(&self) -> f64 {
             self.balance
         }
-
         // Public method to deposit funds.
         pub fn deposit(&mut self, amount: f64) {
             if amount > 0.0 {
@@ -24,7 +23,6 @@ mod bank {
                 println!("Cannot deposit a non-positive amount.");
             }
         }
-
         // Public method to withdraw funds.
         pub fn withdraw(&mut self, amount: f64) -> Result<(), String> {
             if amount <= 0.0 {
@@ -40,7 +38,6 @@ mod bank {
         }
     }
 }
-
 fn main() {
     use bank::BankAccount;
 
@@ -62,6 +59,8 @@ fn main() {
         Ok(_) => println!("Withdrawal successful."),
         Err(e) => println!("Withdrawal failed: {}", e),
     }
-
     println!("Final balance: {:.2}", account.balance());
 }
+
+
+

@@ -5,7 +5,6 @@ fn main() {
 }
 
 fn main() {
-
     let some_number = Some(5);
     match some_number {
         Some(n) => println!("The number is {}", n),

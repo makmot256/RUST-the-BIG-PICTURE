@@ -9,7 +9,7 @@ impl Rectangle {
         self.width = width;
     }
 
-    // Setter for height
+    // Setter for height .
     fn set_height(&mut self, height: u32) {
         self.height = height;
     }

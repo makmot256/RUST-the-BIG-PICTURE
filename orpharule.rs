@@ -16,6 +16,14 @@ impl DisplayName for Person {
 }
 
 // Define a struct in a different crate (simulated here)
+
+// Attempt to implement the trait for the struct in the same crate
+// This will result in a compilation error due to the orphan rule
+// impl DisplayName for Person {
+//     fn display_name(&self) -> String {
+//         format!("ID: {}", self.name)
+//     }
+// }
 struct ExternalType {
     id: u32,
 }
@@ -38,4 +46,3 @@ fn main() {
     // let external = ExternalType { id: 42 };
     // println!("{}", external.display_name());
 }
-

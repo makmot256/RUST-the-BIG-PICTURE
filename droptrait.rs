@@ -80,7 +80,6 @@ fn main() {
     };
     println!("End of block");
 }
-
 // Output:
 // End of block
 // Dropping Container2
@@ -89,3 +88,10 @@ fn main() {
 // Dropping Container2
 // Dropping c1-2
 // Dropping c1-1
+
+
+
+
+
+
+
