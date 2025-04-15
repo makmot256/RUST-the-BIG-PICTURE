@@ -131,3 +131,21 @@ async fn main() {
     }(name, &mut Context::default()).timeout(Duration::from_secs(5)).cancel_on_drop(true).spawn_on(tokio::runtime::Runtime::new().unwrap()).await?;
     println!("{}", greeting);
 }
+// Example demonstrating how to use async functions with tokio::time::sleep
+
+use tokio::time::{sleep, Duration};
+
+#[tokio::main]
+async fn main() {
+    println!("Starting async function...");
+    async_sleep().await;
+    println!("Async function completed.");
+}
+
+async fn async_sleep() {
+    println!("Sleeping for 2 seconds...");
+    sleep(Duration::from_secs(2)).await;
+    println!("Woke up after 2 seconds!");
+}
+
+
